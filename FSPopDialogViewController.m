@@ -42,7 +42,7 @@ B = __tmp;\
     if (!_titleLabel)
     {
         _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0,self.view.bounds.size.width,40)];
-        _titleLabel.contentMode = UIViewContentModeScaleAspectFill;//UIViewContentModeCenter;
+        _titleLabel.contentMode = UIViewContentModeCenter;//UIViewContentModeCenter;
         _titleLabel.backgroundColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.5f];
         _titleLabel.numberOfLines = 1;
         _titleLabel.adjustsFontSizeToFitWidth=YES;
@@ -50,7 +50,7 @@ B = __tmp;\
         _titleLabel.font = [UIFont fontWithName:@"Helvetica" size:30];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.textColor = [UIColor whiteColor];
-        _titleLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin);
+//        _titleLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin);
     }
     _titleLabel.text = self.dialogViewTitle;
     
@@ -138,6 +138,8 @@ B = __tmp;\
                      animations:^{
                          self.view.frame = CGRectMake(([FSPopDialogViewController getApplicationFrameSize].width-self.size.width)/2-45, ([FSPopDialogViewController getApplicationFrameSize].height-self.size.height)/2-45, self.size.width+90, self.size.height+90);
                          self.backGroundView.alpha = 0.25;
+                         self.titleLabel.frame = CGRectMake(0, 0, self.size.width+90, 40);
+
                      }
                      completion:^(BOOL finished)
      {
@@ -149,7 +151,8 @@ B = __tmp;\
                                  options:UIViewAnimationOptionCurveEaseIn
                               animations:^{
                                   self.view.frame = CGRectMake(([FSPopDialogViewController getApplicationFrameSize].width-self.size.width)/2+40, ([FSPopDialogViewController getApplicationFrameSize].height-self.size.height)/2+40, self.size.width-80, self.size.height-80);
-//                                  self.titleLabel.frame = CGRectMake(0, 0, self.size.width-80, 40);
+        
+                                  self.titleLabel.frame = CGRectMake(0, 0, self.size.width-80, 40);
                                   
                                   self.backGroundView.alpha = 0.5;
                                   
@@ -158,7 +161,8 @@ B = __tmp;\
               {
                   
                   if (finished)
-                  {
+                  {             sleep(1);
+
                       [UIView animateWithDuration:0.15
                                             delay:0
                                           options:UIViewAnimationOptionCurveEaseOut
