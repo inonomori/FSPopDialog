@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		68EC4638179E1EC300809879 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EC4637179E1EC300809879 /* UIKit.framework */; };
+		68EC463A179E1EC300809879 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EC4639179E1EC300809879 /* Foundation.framework */; };
+		68EC463C179E1EC300809879 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EC463B179E1EC300809879 /* CoreGraphics.framework */; };
+		68EC4642179E1EC300809879 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68EC4640179E1EC300809879 /* InfoPlist.strings */; };
+		68EC4644179E1EC300809879 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EC4643179E1EC300809879 /* main.m */; };
+		68EC4648179E1EC300809879 /* FSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EC4647179E1EC300809879 /* FSAppDelegate.m */; };
+		68EC464A179E1EC300809879 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 68EC4649179E1EC300809879 /* Default.png */; };
+		68EC464C179E1EC300809879 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68EC464B179E1EC300809879 /* Default@2x.png */; };
+		68EC464E179E1EC300809879 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68EC464D179E1EC300809879 /* Default-568h@2x.png */; };
+		68EC4651179E1EC300809879 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68EC464F179E1EC300809879 /* MainStoryboard.storyboard */; };
+		68EC4654179E1EC300809879 /* FSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EC4653179E1EC300809879 /* FSViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		68EC4634179E1EC300809879 /* PopDialog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopDialog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		68EC4637179E1EC300809879 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		68EC4639179E1EC300809879 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		68EC463B179E1EC300809879 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		68EC463F179E1EC300809879 /* PopDialog-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PopDialog-Info.plist"; sourceTree = "<group>"; };
+		68EC4641179E1EC300809879 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		68EC4643179E1EC300809879 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		68EC4645179E1EC300809879 /* PopDialog-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PopDialog-Prefix.pch"; sourceTree = "<group>"; };
+		68EC4646179E1EC300809879 /* FSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAppDelegate.h; sourceTree = "<group>"; };
+		68EC4647179E1EC300809879 /* FSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAppDelegate.m; sourceTree = "<group>"; };
+		68EC4649179E1EC300809879 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		68EC464B179E1EC300809879 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		68EC464D179E1EC300809879 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		68EC4650179E1EC300809879 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		68EC4652179E1EC300809879 /* FSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSViewController.h; sourceTree = "<group>"; };
+		68EC4653179E1EC300809879 /* FSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		68EC4631179E1EC300809879 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68EC4638179E1EC300809879 /* UIKit.framework in Frameworks */,
+				68EC463A179E1EC300809879 /* Foundation.framework in Frameworks */,
+				68EC463C179E1EC300809879 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		68EC462B179E1EC300809879 = {
+			isa = PBXGroup;
+			children = (
+				68EC463D179E1EC300809879 /* PopDialog */,
+				68EC4636179E1EC300809879 /* Frameworks */,
+				68EC4635179E1EC300809879 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		68EC4635179E1EC300809879 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68EC4634179E1EC300809879 /* PopDialog.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		68EC4636179E1EC300809879 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68EC4637179E1EC300809879 /* UIKit.framework */,
+				68EC4639179E1EC300809879 /* Foundation.framework */,
+				68EC463B179E1EC300809879 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68EC463D179E1EC300809879 /* PopDialog */ = {
+			isa = PBXGroup;
+			children = (
+				68EC4646179E1EC300809879 /* FSAppDelegate.h */,
+				68EC4647179E1EC300809879 /* FSAppDelegate.m */,
+				68EC464F179E1EC300809879 /* MainStoryboard.storyboard */,
+				68EC4652179E1EC300809879 /* FSViewController.h */,
+				68EC4653179E1EC300809879 /* FSViewController.m */,
+				68EC463E179E1EC300809879 /* Supporting Files */,
+			);
+			path = PopDialog;
+			sourceTree = "<group>";
+		};
+		68EC463E179E1EC300809879 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68EC463F179E1EC300809879 /* PopDialog-Info.plist */,
+				68EC4640179E1EC300809879 /* InfoPlist.strings */,
+				68EC4643179E1EC300809879 /* main.m */,
+				68EC4645179E1EC300809879 /* PopDialog-Prefix.pch */,
+				68EC4649179E1EC300809879 /* Default.png */,
+				68EC464B179E1EC300809879 /* Default@2x.png */,
+				68EC464D179E1EC300809879 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		68EC4633179E1EC300809879 /* PopDialog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68EC4657179E1EC300809879 /* Build configuration list for PBXNativeTarget "PopDialog" */;
+			buildPhases = (
+				68EC4630179E1EC300809879 /* Sources */,
+				68EC4631179E1EC300809879 /* Frameworks */,
+				68EC4632179E1EC300809879 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PopDialog;
+			productName = PopDialog;
+			productReference = 68EC4634179E1EC300809879 /* PopDialog.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		68EC462C179E1EC300809879 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Finder Studio";
+			};
+			buildConfigurationList = 68EC462F179E1EC300809879 /* Build configuration list for PBXProject "PopDialog" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 68EC462B179E1EC300809879;
+			productRefGroup = 68EC4635179E1EC300809879 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68EC4633179E1EC300809879 /* PopDialog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		68EC4632179E1EC300809879 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68EC4642179E1EC300809879 /* InfoPlist.strings in Resources */,
+				68EC464A179E1EC300809879 /* Default.png in Resources */,
+				68EC464C179E1EC300809879 /* Default@2x.png in Resources */,
+				68EC464E179E1EC300809879 /* Default-568h@2x.png in Resources */,
+				68EC4651179E1EC300809879 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68EC4630179E1EC300809879 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68EC4644179E1EC300809879 /* main.m in Sources */,
+				68EC4648179E1EC300809879 /* FSAppDelegate.m in Sources */,
+				68EC4654179E1EC300809879 /* FSViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		68EC4640179E1EC300809879 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68EC4641179E1EC300809879 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		68EC464F179E1EC300809879 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68EC4650179E1EC300809879 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		68EC4655179E1EC300809879 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		68EC4656179E1EC300809879 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		68EC4658179E1EC300809879 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PopDialog/PopDialog-Prefix.pch";
+				INFOPLIST_FILE = "PopDialog/PopDialog-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		68EC4659179E1EC300809879 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PopDialog/PopDialog-Prefix.pch";
+				INFOPLIST_FILE = "PopDialog/PopDialog-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		68EC462F179E1EC300809879 /* Build configuration list for PBXProject "PopDialog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68EC4655179E1EC300809879 /* Debug */,
+				68EC4656179E1EC300809879 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68EC4657179E1EC300809879 /* Build configuration list for PBXNativeTarget "PopDialog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68EC4658179E1EC300809879 /* Debug */,
+				68EC4659179E1EC300809879 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 68EC462C179E1EC300809879 /* Project object */;
+}
