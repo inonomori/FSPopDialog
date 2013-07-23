@@ -18,6 +18,7 @@
 		68EC464E179E1EC300809879 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68EC464D179E1EC300809879 /* Default-568h@2x.png */; };
 		68EC4651179E1EC300809879 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68EC464F179E1EC300809879 /* MainStoryboard.storyboard */; };
 		68EC4654179E1EC300809879 /* FSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EC4653179E1EC300809879 /* FSViewController.m */; };
+		68EC465C179E1EDC00809879 /* FSPopDialogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EC465B179E1EDC00809879 /* FSPopDialogViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		68EC4650179E1EC300809879 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		68EC4652179E1EC300809879 /* FSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSViewController.h; sourceTree = "<group>"; };
 		68EC4653179E1EC300809879 /* FSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSViewController.m; sourceTree = "<group>"; };
+		68EC465A179E1EDC00809879 /* FSPopDialogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPopDialogViewController.h; sourceTree = "<group>"; };
+		68EC465B179E1EDC00809879 /* FSPopDialogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPopDialogViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,8 @@
 		68EC462B179E1EC300809879 = {
 			isa = PBXGroup;
 			children = (
+				68EC465A179E1EDC00809879 /* FSPopDialogViewController.h */,
+				68EC465B179E1EDC00809879 /* FSPopDialogViewController.m */,
 				68EC463D179E1EC300809879 /* PopDialog */,
 				68EC4636179E1EC300809879 /* Frameworks */,
 				68EC4635179E1EC300809879 /* Products */,
@@ -177,6 +182,7 @@
 				68EC4644179E1EC300809879 /* main.m in Sources */,
 				68EC4648179E1EC300809879 /* FSAppDelegate.m in Sources */,
 				68EC4654179E1EC300809879 /* FSViewController.m in Sources */,
+				68EC465C179E1EDC00809879 /* FSPopDialogViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

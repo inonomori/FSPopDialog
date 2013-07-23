@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FSPopDialogViewController.h"
 
-@interface FSViewController : UIViewController
+@interface FSViewController : UIViewController <FSPopDialogProtocol>
+
 
 @end
