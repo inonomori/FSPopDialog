@@ -31,12 +31,13 @@
 {
     FSPopDialogViewController *dialog = [[FSPopDialogViewController alloc] init];
     dialog.delegate = self;
-    dialog.size = CGSizeMake(200, 300);
+    dialog.size = CGSizeMake(300, 400);
     dialog.dialogViewTitle = @"Is it OK?";
-    dialog.question = @"click OK to continue, or NO to cancel";
+    dialog.question = @"阿布军没有小鸡鸡，没有小鸡鸡的是阿布。阿布军没有小鸡鸡，没有小鸡鸡的是阿布。阿布军没有小鸡鸡，没有小鸡鸡的是阿布。阿布军没有小鸡鸡，没有小鸡鸡的是阿布。阿布军没有小鸡鸡，没有小鸡鸡的是阿布。阿布军没有小鸡鸡，没有小鸡鸡的是阿布。阿布军没有小鸡鸡，没有小鸡鸡的是阿布。阿布军没有小鸡鸡，没有小鸡鸡的是阿布。";
     dialog.okButtonTitle = @"OK";
     dialog.cancelButtonTitle = @"NO";
     dialog.okBlock = ^{[dialog disappear];};
+    dialog.cancelBlock = ^{[dialog disappear];};
     [dialog appear];
 }
 

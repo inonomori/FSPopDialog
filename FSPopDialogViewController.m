@@ -7,6 +7,7 @@
 //
 
 #import "FSPopDialogViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 #define TLSWAP(A,B) do{\
 __typeof__(A) __tmp = (A);\
@@ -42,15 +43,15 @@ B = __tmp;\
     if (!_titleLabel)
     {
         _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0,self.view.bounds.size.width,40)];
-        _titleLabel.contentMode = UIViewContentModeCenter;//UIViewContentModeCenter;
+        _titleLabel.contentMode = UIViewContentModeScaleAspectFill;//UIViewContentModeCenter;
         _titleLabel.backgroundColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.5f];
         _titleLabel.numberOfLines = 1;
         _titleLabel.adjustsFontSizeToFitWidth=YES;
         _titleLabel.minimumScaleFactor = 0.5;
-        _titleLabel.font = [UIFont fontWithName:@"Helvetica" size:30];
+        _titleLabel.font = [UIFont fontWithName:@"Helvetica" size:25];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.textColor = [UIColor whiteColor];
-//        _titleLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin);
+        _titleLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin);
     }
     _titleLabel.text = self.dialogViewTitle;
     
@@ -61,7 +62,7 @@ B = __tmp;\
 {
     if (!_questionLabel)
     {
-        _questionLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 60, self.view.bounds.size.width, 160)];
+        _questionLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, self.size.height/2-120, self.view.bounds.size.width, 200)];
         _questionLabel.backgroundColor = [UIColor clearColor];
         _questionLabel.numberOfLines = 0;
         _questionLabel.contentMode = UIViewContentModeScaleAspectFill;
@@ -82,6 +83,13 @@ B = __tmp;\
     return size;
 }
 
++ (UIColor *)colorWithHex:(long)hexColor alpha:(CGFloat)opacity
+{
+    CGFloat red = ((CGFloat)((hexColor & 0xFF0000) >> 16))/255.0;
+    CGFloat green = ((CGFloat)((hexColor & 0xFF00) >> 8))/255.0;
+    CGFloat blue = ((CGFloat)(hexColor & 0xFF))/255.0;
+    return [UIColor colorWithRed:red green:green blue:blue alpha:opacity];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -95,23 +103,31 @@ B = __tmp;\
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.contentMode = UIViewContentModeScaleToFill;
     [self.view setClipsToBounds:YES];
     self.view.backgroundColor = [UIColor whiteColor];
     self.view.frame = CGRectMake([FSPopDialogViewController getApplicationFrameSize].width/2, [FSPopDialogViewController getApplicationFrameSize].height/2, 1, 1);
-    self.okButton = [[UIButton alloc] initWithFrame:CGRectMake(5, self.size.height-70, 90, 50)];
-    self.cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(self.size.width-95, self.size.height-70, 90, 50)];
-    self.okButton.backgroundColor = [UIColor colorWithRed:0 green:10/255 blue:1 alpha:1];
+    self.okButton = [[UIButton alloc] initWithFrame:CGRectMake(5, self.size.height-55, self.size.width/2-7.5, 50)];
+    self.cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(self.size.width/2+2.5, self.size.height-55, self.size.width/2-7.5, 50)];
     [self.okButton setTitle:self.okButtonTitle forState:UIControlStateNormal];
+    self.okButton.backgroundColor = [FSPopDialogViewController colorWithHex:0x287dea alpha:1.0];
     self.cancelButton.backgroundColor = [UIColor orangeColor];
     [self.cancelButton setTitle:self.cancelButtonTitle forState:UIControlStateNormal];
     [self.okButton addTarget:self action:@selector(okButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
     [self.cancelButton addTarget:self action:@selector(cancelButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
-    self.okButton.alpha = 0;
-    self.okButton.hidden = YES;
-    self.cancelButton.alpha = 0;
-    self.cancelButton.hidden = YES;
-    
+//    self.okButton.autoresizingMask = (UIViewAutoresizingFlexibleWidth );
+
+//    self.okButton.alpha = 0;
+//
+//    self.cancelButton.alpha = 0;
+//    self.cancelButton.hidden = YES;
+//    self.okButton.hidden = YES;
+
+    self.view.layer.masksToBounds = NO;
+    self.view.layer.cornerRadius = 8;
+    self.view.layer.shadowOffset = CGSizeMake(10, 10);
+    self.view.layer.shadowRadius = 5;
+    self.view.layer.shadowOpacity = 0.5;
+
     [self.view addSubview:self.titleLabel];
     [self.view addSubview:self.questionLabel];
     [self.view addSubview:self.okButton];
@@ -136,24 +152,25 @@ B = __tmp;\
                           delay:0
                         options:UIViewAnimationOptionCurveEaseIn
                      animations:^{
-                         self.view.frame = CGRectMake(([FSPopDialogViewController getApplicationFrameSize].width-self.size.width)/2-45, ([FSPopDialogViewController getApplicationFrameSize].height-self.size.height)/2-45, self.size.width+90, self.size.height+90);
-                         self.backGroundView.alpha = 0.25;
-                         self.titleLabel.frame = CGRectMake(0, 0, self.size.width+90, 40);
-
+                         CGRect frame = CGRectMake(([FSPopDialogViewController getApplicationFrameSize].width-self.size.width)/2-45, ([FSPopDialogViewController getApplicationFrameSize].height-self.size.height)/2-45, self.size.width+90, self.size.height+90);
+                         self.view.frame = frame;                         self.backGroundView.alpha = 0.25;
+                         self.okButton.frame = CGRectMake(5, frame.size.height-55, frame.size.width/2-7.5, 50);
+                         self.cancelButton.frame = CGRectMake(frame.size.width/2+2.5, frame.size.height-55, frame.size.width/2-7.5, 50);
                      }
                      completion:^(BOOL finished)
      {
          if (finished)
          {
-             sleep(1);
              [UIView animateWithDuration:0.15
                                    delay:0
                                  options:UIViewAnimationOptionCurveEaseIn
                               animations:^{
-                                  self.view.frame = CGRectMake(([FSPopDialogViewController getApplicationFrameSize].width-self.size.width)/2+40, ([FSPopDialogViewController getApplicationFrameSize].height-self.size.height)/2+40, self.size.width-80, self.size.height-80);
+                                  CGRect frame = CGRectMake(([FSPopDialogViewController getApplicationFrameSize].width-self.size.width)/2+40, ([FSPopDialogViewController getApplicationFrameSize].height-self.size.height)/2+40, self.size.width-80, self.size.height-80);
+                                  self.view.frame = frame;
+                                  self.okButton.frame = CGRectMake(5, frame.size.height-55, frame.size.width/2-7.5, 50);
+                                  self.cancelButton.frame = CGRectMake(frame.size.width/2+2.5, frame.size.height-55, frame.size.width/2-7.5, 50);
+
         
-                                  self.titleLabel.frame = CGRectMake(0, 0, self.size.width-80, 40);
-                                  
                                   self.backGroundView.alpha = 0.5;
                                   
                               }
@@ -161,25 +178,26 @@ B = __tmp;\
               {
                   
                   if (finished)
-                  {             sleep(1);
-
+                  {            
                       [UIView animateWithDuration:0.15
                                             delay:0
                                           options:UIViewAnimationOptionCurveEaseOut
                                        animations:^{
-                                           self.view.frame = CGRectMake(([FSPopDialogViewController getApplicationFrameSize].width-self.size.width)/2, ([FSPopDialogViewController getApplicationFrameSize].height-self.size.height)/2, self.size.width, self.size.height);
+                                           CGRect frame = CGRectMake(([FSPopDialogViewController getApplicationFrameSize].width-self.size.width)/2, ([FSPopDialogViewController getApplicationFrameSize].height-self.size.height)/2, self.size.width, self.size.height);
                                            self.backGroundView.alpha = 0.75;
+                                           self.view.frame = frame;
+                                           self.okButton.frame = CGRectMake(5, frame.size.height-55, frame.size.width/2-7.5, 50);
+                                           self.cancelButton.frame = CGRectMake(frame.size.width/2+2.5, frame.size.height-55, frame.size.width/2-7.5, 50);
+
                                        }
                                        completion:^(BOOL finished)
                        {
-                           self.okButton.hidden = NO;
-                           self.cancelButton.hidden = NO;
+//                           self.okButton.hidden = NO;
+//                           self.cancelButton.hidden = NO;
                            [UIView animateWithDuration:0.05
                                                  delay:0
                                                options:UIViewAnimationOptionCurveEaseInOut
                                             animations:^{
-                                                self.okButton.alpha = 1;
-                                                self.cancelButton.alpha = 1;
                                             }
                                             completion:nil
                             ];
@@ -189,10 +207,6 @@ B = __tmp;\
               }];
          }
      }];
-    
-    
-    
-    
     
     [self.delegate.view addSubview:self.backGroundView];
     [self.delegate.view addSubview:self.view];
@@ -217,8 +231,10 @@ B = __tmp;\
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
                          self.backGroundView.alpha = 0;
-                         self.view.frame = CGRectMake([FSPopDialogViewController getApplicationFrameSize].width/2, [FSPopDialogViewController getApplicationFrameSize].height/2, 0, 0);
-                         
+                         CGRect frame = CGRectMake([FSPopDialogViewController getApplicationFrameSize].width/2, [FSPopDialogViewController getApplicationFrameSize].height/2, 0, 0);
+                         self.view.frame = frame;
+                         self.okButton.frame = CGRectMake(0, 0, 1, 1);
+                         self.cancelButton.frame = CGRectMake(0, 0, 1, 1);
                      }
                      completion:^(BOOL finished){
                          if (finished)
