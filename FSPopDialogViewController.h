@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, FSPopDialogStyle){
+    FSPopDialogStylePop,
+    FSPopDialogStyleFromBottom,
+    FSPopDialogStyleFromTop,
+    FSPopDialogStyleFromLeft,
+    FSPopDialogStyleFromRight
+};
+
 typedef void (^(FSBlock))(void);
 
 @protocol FSPopDialogProtocol <NSObject>
@@ -26,6 +34,8 @@ typedef void (^(FSBlock))(void);
 @property (nonatomic, strong) NSString *cancelButtonTitle;
 @property (nonatomic, strong) FSBlock okBlock;
 @property (nonatomic, strong) FSBlock cancelBlock;
+@property (nonatomic) FSPopDialogStyle popDialogStyle;
+@property (nonatomic) FSPopDialogStyle disappearDialogStyle;
 
 - (void)appear;
 - (void)disappear;
